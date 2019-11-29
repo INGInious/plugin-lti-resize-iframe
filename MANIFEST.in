@@ -1,0 +1,2 @@
+recursive-include lti_resize_frame/ *
+recursive-include lti_resize_frame/static/ *
