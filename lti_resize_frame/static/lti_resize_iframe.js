@@ -4,7 +4,8 @@ bodyHeight = 0;
 function resizeAndPostSize() {
     if (document.getElementById("main-content")) {
         if (document.getElementById("main-content").scrollHeight != bodyHeight) {
-            bodyHeight = document.getElementById("main-content").scrollHeight;
+            // Get scrollHeight and add the side menu height
+            bodyHeight = document.getElementById("main-content").scrollHeight + 50;
             window.parent.postMessage({height: bodyHeight}, "*");
         }
     }
