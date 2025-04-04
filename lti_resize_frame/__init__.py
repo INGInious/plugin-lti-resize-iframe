@@ -14,7 +14,7 @@ PATH_TO_PLUGIN = os.path.abspath(os.path.dirname(__file__))
 
 class StaticMockPage(INGIniousPage):
     def GET(self, path):
-        return send_from_directory(os.path.join(_dir_path, "static"), path)
+        return send_from_directory(os.path.join(PATH_TO_PLUGIN, "static"), path)
 
     def POST(self, path):
         return self.GET(path)
